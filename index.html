@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	<title>datepicker</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="date.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form style="padding-top: 50px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="eventDate" placeholder="选择日期" name="eventDate" readonly>
+                    </div>
+                    <!-- <div class="form-group">
+                        <select class="form-control">
+                            <option value="">23:00~00:59 (子)</option>
+                            <option value="">01:00~02:59 (丑)</option>
+                            <option value="">03:00~04:59 (寅)</option>
+                            <option value="">05:00~06:59 (卯)</option>
+                            <option value="">07:00~08:59 (辰)</option>
+                            <option value="">09:00~10:59 (巳)</option>
+                            <option value="">11:00~12:59 (午)</option>
+                            <option value="">13:00~14:59 (未)</option>
+                            <option value="">15:00~16:59 (申)</option>
+                            <option value="">17:00~18:59 (酉)</option>
+                            <option value="">19:00~20:59 (戌)</option>
+                            <option value="">21:00~22:59 (亥)</option>
+                        </select>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+        <!-- 日历开始-->
+    	<div class="date text-center" style="width: 100%;">
+    		<div id="dateshadow"></div>
+    		<div id="datePage" class="page">
+    			<div id="datetitle" >
+    				<input value="1" type="radio" name="datetype" checked id="solarRadio" >
+    				<label for="solarRadio">公历</label>
+    				<input value="0" type="radio" name="datetype"  id="lunarRadio">
+    				<label for="lunarRadio">农历</label>
+    			</div>
+    			<div id="datemark"></div>
+    			<div id="datescroll">
+    				<div id="yearwrapper">
+    					<ul></ul>
+    				</div>
+    				<div id="monthwrapper">
+    					<ul></ul>
+    				</div>
+    				<div id="daywrapper">
+    					<ul></ul>
+    				</div>
+    			</div>
+    			<div id="setcancle">
+    				<ul>
+    					<li id="dateconfirm">确定</li>
+    					<li id="datecancle">取消</li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    	<!--日历结束-->
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+	<script src="date.js"></script> 
+	<script src="iscroll.js"></script> 
+	<script>
+	    $(function(){
+	        $('#eventDate').date();
+	    })
+	</script>
+</body>
+</html>

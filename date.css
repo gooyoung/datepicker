@@ -1,0 +1,64 @@
+﻿/*环境样式*/
+/*body{font-family:'微软雅黑'; font-size: 12px; color: #888;background: #F5F5F5;}*/
+ul{ padding-left: 0; list-style: none;}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+  background: #fff;
+}
+/*日期选择控件样式*/
+#dateshadow{
+  display: none;position: absolute;width: 100%;
+  height: 100%;top:0;left:0;background: rgba(0,0,0,0.4);
+  z-index: 3;
+}
+#datePage{ 
+  border-radius: 4px; 
+  position:absolute;top:200px; left: 0;right: 0;margin:auto;
+  width: 95%; max-width: 350px; height: 240px; 
+  background: #fff;z-index:9999;
+  display: none;overflow: hidden;
+  -webkit-box-shadow: 0 12px 36px 16px rgba(0,0,0,.24);
+  -moz-box-shadow: 0 12px 36px 16px rgba(0,0,0,.24);
+  box-shadow: 0 12px 36px 16px rgba(0,0,0,.24);
+}
+#datetitle{
+  width: 100%;height:50px;background: #fff;
+  color: #888;line-height: 50px;font-size: 20px;
+}
+#datetitle input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+#datetitle input[type=radio] + label {
+    display:inline-block;
+    width:50%;
+    margin:-2px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+}
+#datetitle input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#fff;
+   color: #008e59;
+  box-shadow: none;
+}
+#datemark {
+  left: 7%;width: 86%;height: 30px;position: absolute;
+  top: 50%;margin-top: -15px;background: #afc8ba;
+}
+#datescroll{
+  background: #F8F8F8;width:94%; margin:10px 3% 12px;border: 1px solid #E0E0E0;
+  border-radius: 4px;height: 120px;line-height: 40px;color: #888;
+}
+#datescroll div{float: left;margin-left: 12%;margin-top: 15px;padding-right: 22px;}
+#yearwrapper{position: absolute;left: 0;top:45px;bottom: 60px;width:80%; overflow: hidden;}
+#monthwrapper{position: absolute;left: 26%;top:45px;bottom: 60px;width:80%; overflow: hidden;}
+#daywrapper{position: absolute;left: 50%;top:45px;bottom: 60px;width:80%; overflow: hidden;}
+#yearwrapper ul,#monthwrapper ul,#daywrapper ul{width:40%;}
+#setcancle ul li{
+  border-radius:4px;float: left;width: 40%;
+  height: 35px;font-size:16px;line-height: 35px;
+}
+#dateconfirm{position: absolute;background:#008e59;left:20px;color:#fff;cursor: pointer;}
+#datecancle{position: absolute;background:  #ddd;right:20px;width: 40%;color:#888;cursor: pointer;}
+
+
